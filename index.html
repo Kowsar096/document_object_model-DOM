@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Welcome to DOM</h1>
+        <h1>Document Object Model</h1>
+        <h2>-----JavaScript-------</h2>
+        <ul>
+            <li>Jamal</li>
+            <li>Kamal</li>
+            <li>Kader</li>
+        </ul>
+    </main>
+
+    <script>
+        console.log("Document Object Model in Javascript");
+
+        const student = {
+            name: 'Steven Hocking',
+            id: 121,
+            study: function(subject){
+                console.log("Studying Subject: ", subject);
+            }
+        }
+
+        // document.getElementsByTagName
+
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+
+        // for of loop
+
+        for(const li of liCollection){
+            console.log(li)
+        }
+        // for of loop (only text or anythings)
+
+        for(const li of liCollection){
+            console.log(li.innerText)
+        }
+
+        // all h1 tags
+
+        const allHeading = document.getElementsByTagName('h1');
+        for(const heading of allHeading){
+            console.log(heading);
+        }
+
+    </script>
+    <script src="js/hello.js"></script>
+</body>
+</html>
