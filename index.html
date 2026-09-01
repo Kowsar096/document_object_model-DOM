@@ -7,7 +7,8 @@
 </head>
 <body>
     <main>
-        <h1>Welcome to DOM</h1>
+        <section>
+            <h1>Welcome to DOM</h1>
         <h1>Document Object Model</h1>
         <h2>-----JavaScript-------</h2>
         <ul>
@@ -15,6 +16,29 @@
             <li>Kamal</li>
             <li>Kader</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="food-title">Food i loved most</h1>
+            <ul>
+                <li>Rice</li>
+                <li>Potato</li>
+                <li class="foreign">Burger</li>
+                <li class="foreign">Pizza</li>
+                <li class="foreign">Pasta</li>
+                <li>Beef</li>
+                <li>Fish</li>
+            </ul>
+        </section>
+        <section id="players-container">
+            <h1>Players Containers</h1>
+            <ul>
+                <li>Messi</li>
+                <li>Ronaldo</li>
+                <li>Neymar</li>
+                <li>Mbappe</li>
+                <li>Suarez</li>
+            </ul>
+        </section>
     </main>
 
     <script>
@@ -31,27 +55,44 @@
         // document.getElementsByTagName
 
         const liCollection = document.getElementsByTagName('li');
-        console.log(liCollection);
+        // console.log(liCollection);
 
         // for of loop
 
         for(const li of liCollection){
-            console.log(li)
+            // console.log(li)
         }
         // for of loop (only text or anythings)
 
         for(const li of liCollection){
-            console.log(li.innerText)
+            // console.log(li.innerText)
         }
 
         // all h1 tags
 
         const allHeading = document.getElementsByTagName('h1');
         for(const heading of allHeading){
-            console.log(heading);
+            // console.log(heading);
         }
 
+        // get by id
+
+        const foodTitle = document.getElementById('food-title');
+
+        foodTitle.innerText='Food i loved to eat'
+        // get elements by class name
+
+        const foreignElements = document.getElementsByClassName('foreign')
+
+        // console.log(foreignElements)
+
+        // if we need single item than we can use getElementsById
+        // if we need multiple item than we can use getElementsByClass
+       const querySelector= document.querySelectorAll('#food-title')
+       console.log(querySelector); 
     </script>
     <script src="js/hello.js"></script>
+    <script src="js/cssInJs.js"></script>
+
 </body>
 </html>
