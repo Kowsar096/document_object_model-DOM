@@ -66,3 +66,19 @@ function addTask(){
 }
 
 addBtn.addEventListener('click', addTask);
+
+function completeTask(id){
+    let task = tasks.find((task) => task.id == id);
+
+    task.completed = !task.completed;
+    // task.classList.add('completed');
+    render()
+}
+
+function deleteTask(id){
+    tasks = tasks.filter((task) => task.id != id);
+
+    // task.completed = !task.completed;
+    // task.classList.add('completed');
+    render()
+}
