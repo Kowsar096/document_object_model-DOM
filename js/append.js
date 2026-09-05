@@ -11,8 +11,30 @@ const placesSection = document.createElement('section');
 
 const h1 = document.createElement('h1');
 h1.innerText = 'Places i want to visit';
+placesSection.appendChild(h1);
+
+const ul = document.createElement('ul');
+
+const li1 = document.createElement('li');
+li1.innerText=  'Bandarbon';
+ul.appendChild(li1);
+placesSection.appendChild(ul);
 
 
 // 3. append placeSection
 
 mainContainer.appendChild(placesSection) 
+
+// easier to create HTML
+
+const booksSection = document.createElement('section');
+
+booksSection.innerHTML=`
+<h1>Books i want to read </h1>
+<ul>
+    <li>Physics</li>
+    <li>Chemistry</li>
+</ul>
+`
+
+mainContainer.appendChild(booksSection)
